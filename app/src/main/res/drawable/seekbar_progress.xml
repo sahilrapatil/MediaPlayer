@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/img_seekbar_bg"
+        android:dither="true">
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="#80028ac8"
+                    android:centerColor="#80127fb1"
+                    android:centerY="0.75"
+                    android:endColor="#a004638f"
+                    android:angle="270"
+                    />
+            </shape>
+        </clip>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/seekbar_progress_bg"
+        />
+</layer-list>
+<SeekBar
+android:id="@+id/songProgressBar"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_marginRight="20dp"
+android:layout_marginLeft="20dp"
+android:layout_marginBottom="20dp"
+android:layout_above="@id/player_footer_bg"
+android:thumb="@drawable/seek_handler"
+android:progressDrawable="@drawable/seekbar_progress"
+android:paddingLeft="6dp"
+android:paddingRight="6dp"/>
